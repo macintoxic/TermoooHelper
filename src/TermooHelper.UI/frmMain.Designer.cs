@@ -1,4 +1,6 @@
-﻿namespace TermooHelper.UI
+﻿using System.Windows.Forms;
+
+namespace TermooHelper.UI
 {
     partial class frmMain
     {

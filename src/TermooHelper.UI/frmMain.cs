@@ -1,5 +1,8 @@
 //Copyright (c) Charles Alves - Ceu System - Todos os direitos reservados.
+
+using System;
 using System.Text;
+using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 
 namespace TermooHelper.UI
