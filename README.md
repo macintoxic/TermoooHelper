@@ -1,7 +1,9 @@
 # Termooo Helper
 
 
-Este programa te ajuda a resolver os quebra-cabeças parecidos com o [wordle] (https://www.nytimes.com/games/wordle/index.html)  
+Este programa te ajuda a resolver os quebra-cabeças parecidos com o [wordle](https://www.nytimes.com/games/wordle/index.html)  
+
+![screenshot.jpg](https://github.com/macintoxic/TermoooHelper/blob/master/src/TermooHelper.UI/screenshot.jpg?raw=true)
 
 ## Modo de usar:
 
