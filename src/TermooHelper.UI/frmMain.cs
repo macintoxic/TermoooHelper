@@ -6,15 +6,11 @@ namespace TermooHelper.UI
 {
     public partial class frmMain : Form
     {
-        private readonly SqliteConnection _conn = new SqliteConnection("Data Source=palavras.db");
+        private readonly SqliteConnection _conn = new("Data Source=palavras.db");
 
         public frmMain()
         {
             InitializeComponent();
-        }
-
-        private void txtLetterOne_KeyPress(object sender, KeyPressEventArgs e)
-        {
         }
 
         private void frmMain_Load(object sender, EventArgs e)

@@ -56,7 +56,6 @@
             this.txtLetterOne.Size = new System.Drawing.Size(35, 33);
             this.txtLetterOne.TabIndex = 1;
             this.txtLetterOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLetterOne.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetterOne_KeyPress);
             // 
             // txtLetterTwo
             // 
@@ -100,7 +99,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(81, 38);
+            this.label1.Location = new System.Drawing.Point(51, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(345, 67);
             this.label1.TabIndex = 6;
@@ -108,7 +107,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(81, 178);
+            this.label2.Location = new System.Drawing.Point(51, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(345, 67);
             this.label2.TabIndex = 7;
@@ -116,7 +115,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(81, 284);
+            this.label3.Location = new System.Drawing.Point(51, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(345, 67);
             this.label3.TabIndex = 8;
@@ -124,7 +123,7 @@
             // 
             // txtContains
             // 
-            this.txtContains.Location = new System.Drawing.Point(81, 235);
+            this.txtContains.Location = new System.Drawing.Point(51, 230);
             this.txtContains.Margin = new System.Windows.Forms.Padding(5);
             this.txtContains.MaxLength = 26;
             this.txtContains.Name = "txtContains";
@@ -133,7 +132,7 @@
             // 
             // txtNotContain
             // 
-            this.txtNotContain.Location = new System.Drawing.Point(81, 347);
+            this.txtNotContain.Location = new System.Drawing.Point(51, 342);
             this.txtNotContain.Margin = new System.Windows.Forms.Padding(5);
             this.txtNotContain.MaxLength = 26;
             this.txtNotContain.Name = "txtNotContain";
@@ -145,7 +144,7 @@
             this.dgWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgWords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.palavras});
-            this.dgWords.Location = new System.Drawing.Point(452, 38);
+            this.dgWords.Location = new System.Drawing.Point(422, 33);
             this.dgWords.Name = "dgWords";
             this.dgWords.RowTemplate.Height = 25;
             this.dgWords.Size = new System.Drawing.Size(253, 297);
@@ -164,14 +163,14 @@
             this.pnlLetters.Controls.Add(this.txtLetterThree);
             this.pnlLetters.Controls.Add(this.txtLetterFour);
             this.pnlLetters.Controls.Add(this.txtLetterFive);
-            this.pnlLetters.Location = new System.Drawing.Point(81, 108);
+            this.pnlLetters.Location = new System.Drawing.Point(51, 92);
             this.pnlLetters.Name = "pnlLetters";
             this.pnlLetters.Size = new System.Drawing.Size(251, 67);
             this.pnlLetters.TabIndex = 12;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(452, 351);
+            this.btnSearch.Location = new System.Drawing.Point(422, 346);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 38);
             this.btnSearch.TabIndex = 13;
@@ -181,7 +180,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(585, 351);
+            this.btnReset.Location = new System.Drawing.Point(555, 346);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(120, 38);
             this.btnReset.TabIndex = 14;
