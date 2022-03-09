@@ -3,6 +3,8 @@
 
 Este programa te ajuda a resolver os quebra-cabeças parecidos com o [wordle] (https://www.nytimes.com/games/wordle/index.html)  
 
+![screenshot.jpg](https://github.com/macintoxic/TermoooHelper/blob/master/src/TermooHelper.UI/screenshot.jpg?raw=true)
+
 ## Modo de usar:
 
 Você pode usar as 5 caixas de texto, para colocar as letras que você já sabe a posição.
