@@ -45,8 +45,16 @@ namespace TermooHelper.UI
             this.pnlLetters = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.pnlWrong = new System.Windows.Forms.Panel();
+            this.txtWrongPosition1 = new System.Windows.Forms.TextBox();
+            this.txtWrongPosition2 = new System.Windows.Forms.TextBox();
+            this.txtWrongPosition3 = new System.Windows.Forms.TextBox();
+            this.txtWrongPosition4 = new System.Windows.Forms.TextBox();
+            this.txtWrongPosition5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgWords)).BeginInit();
             this.pnlLetters.SuspendLayout();
+            this.pnlWrong.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtLetterOne
@@ -109,23 +117,23 @@ namespace TermooHelper.UI
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(51, 173);
+            this.label2.Location = new System.Drawing.Point(51, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 67);
+            this.label2.Size = new System.Drawing.Size(345, 60);
             this.label2.TabIndex = 7;
-            this.label2.Text = "2. Informe as letras que ESTÃO na palavra";
+            this.label2.Text = "3. Informe as letras que ESTÃO na palavra";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(51, 279);
+            this.label3.Location = new System.Drawing.Point(51, 448);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(345, 67);
+            this.label3.Size = new System.Drawing.Size(345, 59);
             this.label3.TabIndex = 8;
-            this.label3.Text = "3. Informe as letras que NÃO estão na palavra";
+            this.label3.Text = "4. Informe as letras que NÃO estão na palavra";
             // 
             // txtContains
             // 
-            this.txtContains.Location = new System.Drawing.Point(51, 230);
+            this.txtContains.Location = new System.Drawing.Point(51, 399);
             this.txtContains.Margin = new System.Windows.Forms.Padding(5);
             this.txtContains.MaxLength = 26;
             this.txtContains.Name = "txtContains";
@@ -134,7 +142,7 @@ namespace TermooHelper.UI
             // 
             // txtNotContain
             // 
-            this.txtNotContain.Location = new System.Drawing.Point(51, 342);
+            this.txtNotContain.Location = new System.Drawing.Point(51, 511);
             this.txtNotContain.Margin = new System.Windows.Forms.Padding(5);
             this.txtNotContain.MaxLength = 26;
             this.txtNotContain.Name = "txtNotContain";
@@ -149,7 +157,7 @@ namespace TermooHelper.UI
             this.dgWords.Location = new System.Drawing.Point(422, 33);
             this.dgWords.Name = "dgWords";
             this.dgWords.RowTemplate.Height = 25;
-            this.dgWords.Size = new System.Drawing.Size(253, 297);
+            this.dgWords.Size = new System.Drawing.Size(253, 465);
             this.dgWords.TabIndex = 11;
             // 
             // palavras
@@ -172,7 +180,7 @@ namespace TermooHelper.UI
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(422, 346);
+            this.btnSearch.Location = new System.Drawing.Point(422, 504);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 38);
             this.btnSearch.TabIndex = 13;
@@ -182,7 +190,7 @@ namespace TermooHelper.UI
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(555, 346);
+            this.btnReset.Location = new System.Drawing.Point(555, 504);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(120, 38);
             this.btnReset.TabIndex = 14;
@@ -190,11 +198,88 @@ namespace TermooHelper.UI
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // pnlWrong
+            // 
+            this.pnlWrong.Controls.Add(this.txtWrongPosition1);
+            this.pnlWrong.Controls.Add(this.txtWrongPosition2);
+            this.pnlWrong.Controls.Add(this.txtWrongPosition3);
+            this.pnlWrong.Controls.Add(this.txtWrongPosition4);
+            this.pnlWrong.Controls.Add(this.txtWrongPosition5);
+            this.pnlWrong.Location = new System.Drawing.Point(51, 244);
+            this.pnlWrong.Name = "pnlWrong";
+            this.pnlWrong.Size = new System.Drawing.Size(325, 67);
+            this.pnlWrong.TabIndex = 13;
+            // 
+            // txtWrongPosition1
+            // 
+            this.txtWrongPosition1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWrongPosition1.Location = new System.Drawing.Point(13, 15);
+            this.txtWrongPosition1.Margin = new System.Windows.Forms.Padding(5);
+            this.txtWrongPosition1.MaxLength = 20;
+            this.txtWrongPosition1.Name = "txtWrongPosition1";
+            this.txtWrongPosition1.Size = new System.Drawing.Size(52, 27);
+            this.txtWrongPosition1.TabIndex = 1;
+            this.txtWrongPosition1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtWrongPosition2
+            // 
+            this.txtWrongPosition2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWrongPosition2.Location = new System.Drawing.Point(75, 15);
+            this.txtWrongPosition2.Margin = new System.Windows.Forms.Padding(5);
+            this.txtWrongPosition2.MaxLength = 20;
+            this.txtWrongPosition2.Name = "txtWrongPosition2";
+            this.txtWrongPosition2.Size = new System.Drawing.Size(52, 27);
+            this.txtWrongPosition2.TabIndex = 2;
+            this.txtWrongPosition2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtWrongPosition3
+            // 
+            this.txtWrongPosition3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWrongPosition3.Location = new System.Drawing.Point(137, 15);
+            this.txtWrongPosition3.Margin = new System.Windows.Forms.Padding(5);
+            this.txtWrongPosition3.MaxLength = 20;
+            this.txtWrongPosition3.Name = "txtWrongPosition3";
+            this.txtWrongPosition3.Size = new System.Drawing.Size(52, 27);
+            this.txtWrongPosition3.TabIndex = 3;
+            this.txtWrongPosition3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtWrongPosition4
+            // 
+            this.txtWrongPosition4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWrongPosition4.Location = new System.Drawing.Point(199, 15);
+            this.txtWrongPosition4.Margin = new System.Windows.Forms.Padding(5);
+            this.txtWrongPosition4.MaxLength = 20;
+            this.txtWrongPosition4.Name = "txtWrongPosition4";
+            this.txtWrongPosition4.Size = new System.Drawing.Size(52, 27);
+            this.txtWrongPosition4.TabIndex = 4;
+            this.txtWrongPosition4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtWrongPosition5
+            // 
+            this.txtWrongPosition5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWrongPosition5.Location = new System.Drawing.Point(261, 15);
+            this.txtWrongPosition5.Margin = new System.Windows.Forms.Padding(5);
+            this.txtWrongPosition5.MaxLength = 20;
+            this.txtWrongPosition5.Name = "txtWrongPosition5";
+            this.txtWrongPosition5.Size = new System.Drawing.Size(53, 27);
+            this.txtWrongPosition5.TabIndex = 5;
+            this.txtWrongPosition5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(51, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(345, 67);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "2. Informe as letras q existem, mas estão fora de posição";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 418);
+            this.ClientSize = new System.Drawing.Size(717, 558);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pnlWrong);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.pnlLetters);
@@ -211,11 +296,12 @@ namespace TermooHelper.UI
             this.Name = "frmMain";
             this.Text = "Termooo Helper";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmMain_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.dgWords)).EndInit();
             this.pnlLetters.ResumeLayout(false);
             this.pnlLetters.PerformLayout();
+            this.pnlWrong.ResumeLayout(false);
+            this.pnlWrong.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +324,12 @@ namespace TermooHelper.UI
         private DataGridViewTextBoxColumn palavras;
         private Button btnSearch;
         private Button btnReset;
+        private Panel pnlWrong;
+        private TextBox txtWrongPosition1;
+        private TextBox txtWrongPosition2;
+        private TextBox txtWrongPosition3;
+        private TextBox txtWrongPosition4;
+        private TextBox txtWrongPosition5;
+        private Label label4;
     }
 }
