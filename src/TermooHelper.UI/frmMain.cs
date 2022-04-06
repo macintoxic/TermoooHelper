@@ -1,26 +1,14 @@
-//Copyright (c) Charles Alves - Ceu System - Todos os direitos reservados.
-
 using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
-using Microsoft.VisualBasic.ApplicationServices;
 
 namespace TermooHelper.UI
 {
     public partial class frmMain : Form
     {
-        //private readonly SqliteConnection _conn = new("Data Source=palavras.db");
-
-        //private SqlConnection sqlConnection = new SqlConnection(
-        //    @"Data Source=localhost\SQLEXPRESS;Integrated Security=True;Database=termoo");
-
-        //private SqlConnection sqlLocalConnection = new SqlConnection(
-        //    @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=Palavras.mdf;Integrated Security=True");
-
 
         SqlConnection localSqlconn;
 
@@ -32,14 +20,16 @@ namespace TermooHelper.UI
             var connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dbpath + ";Integrated Security=True";
             localSqlconn = new SqlConnection(connection);
             localSqlconn.Open();
+            
+            using var comm = localSqlconn.CreateCommand();
+            comm.CommandText = "select count(palavra) from Palavras";
+            lblPalavras.Text = comm.ExecuteScalar().ToString() + " palavras";
 
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //sqlConnection.Open();
-
-            //_conn.Open();
+         
 
         }
 
@@ -54,25 +44,29 @@ namespace TermooHelper.UI
                     AND palavra NOT LIKE '%[]%' COLLATE Latin1_General_CI_Ai
                     ORDER BY palavra
              */
-
-            var templateQuery = @"                    SELECT * FROM palavras2 
-                    WHERE len(palavra) = 5
-                    AND palavra LIKE '_____' COLLATE Latin1_General_CI_Ai
-                    AND palavra LIKE '[^_]____' COLLATE Latin1_General_CI_Ai
-                    AND palavra LIKE '%[]%' COLLATE Latin1_General_CI_Ai
-                    AND palavra NOT LIKE '%[]%' COLLATE Latin1_General_CI_Ai
-                    ORDER BY palavra;
-";
-
-
+            
             var sb = new StringBuilder();
             sb.AppendLine(" select palavra from palavras where");
             sb.AppendLine(BuildLike());
             sb.AppendLine(BuildContains());
             sb.AppendLine(BuildWrongPosition());
             sb.AppendLine(BuildNotContains());
+            sb.AppendLine(BuildCharIndex());
             sb.AppendLine(" order by palavra");
-            Console.WriteLine(sb.ToString());
+            Trace.WriteLine(sb.ToString());
+            return sb.ToString();
+        }
+
+        private string? BuildCharIndex()
+        {
+            var sb = new StringBuilder();
+
+            foreach (var c in txtContains.Text)
+            {
+
+                sb.AppendLine($" and charindex('{c}', Palavra) > 0");
+            }
+
             return sb.ToString();
         }
 
@@ -146,11 +140,18 @@ namespace TermooHelper.UI
             {
                 dgWords.Rows.Add(reader.GetValue(0));
             }
+
+            lblPalavras.Text = dgWords.Rows.Count.ToString() + " palavras";
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             foreach (TextBox txtLetter in pnlLetters.Controls)
+            {
+                txtLetter.Text = "";
+            }
+
+            foreach (TextBox txtLetter in pnlWrong.Controls)
             {
                 txtLetter.Text = "";
             }
@@ -165,6 +166,19 @@ namespace TermooHelper.UI
             frmMain_KeyUp(null!, new KeyEventArgs(Keys.F5));
         }
 
+        private void txtLetterOne_TextChanged(object sender, EventArgs e)
+        {
+            txtContains.Text = "";
+            
+            foreach (TextBox txtLetter in pnlLetters.Controls)
+            {
+                txtContains.Text += txtLetter.Text;
+            }
 
+            foreach (TextBox txtLetter in pnlWrong.Controls)
+            {
+                txtContains.Text += txtLetter.Text;
+            }
+        }
     }
 }

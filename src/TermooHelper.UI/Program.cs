@@ -1,5 +1,3 @@
-//Copyright (c) Charles Alves - Ceu System - Todos os direitos reservados.
-
 using System;
 using System.Windows.Forms;
 

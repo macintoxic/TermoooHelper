@@ -52,6 +52,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition4 = new System.Windows.Forms.TextBox();
             this.txtWrongPosition5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblPalavras = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgWords)).BeginInit();
             this.pnlLetters.SuspendLayout();
             this.pnlWrong.SuspendLayout();
@@ -66,6 +67,7 @@ namespace TermooHelper.UI
             this.txtLetterOne.Size = new System.Drawing.Size(35, 33);
             this.txtLetterOne.TabIndex = 1;
             this.txtLetterOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetterOne.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtLetterTwo
             // 
@@ -76,6 +78,7 @@ namespace TermooHelper.UI
             this.txtLetterTwo.Size = new System.Drawing.Size(35, 33);
             this.txtLetterTwo.TabIndex = 2;
             this.txtLetterTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetterTwo.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtLetterThree
             // 
@@ -86,6 +89,7 @@ namespace TermooHelper.UI
             this.txtLetterThree.Size = new System.Drawing.Size(35, 33);
             this.txtLetterThree.TabIndex = 3;
             this.txtLetterThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetterThree.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtLetterFour
             // 
@@ -96,6 +100,7 @@ namespace TermooHelper.UI
             this.txtLetterFour.Size = new System.Drawing.Size(35, 33);
             this.txtLetterFour.TabIndex = 4;
             this.txtLetterFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetterFour.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtLetterFive
             // 
@@ -106,6 +111,7 @@ namespace TermooHelper.UI
             this.txtLetterFive.Size = new System.Drawing.Size(35, 33);
             this.txtLetterFive.TabIndex = 5;
             this.txtLetterFive.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetterFive.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // label1
             // 
@@ -154,10 +160,10 @@ namespace TermooHelper.UI
             this.dgWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgWords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.palavras});
-            this.dgWords.Location = new System.Drawing.Point(422, 33);
+            this.dgWords.Location = new System.Drawing.Point(422, 56);
             this.dgWords.Name = "dgWords";
             this.dgWords.RowTemplate.Height = 25;
-            this.dgWords.Size = new System.Drawing.Size(253, 465);
+            this.dgWords.Size = new System.Drawing.Size(253, 441);
             this.dgWords.TabIndex = 11;
             // 
             // palavras
@@ -220,6 +226,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition1.Size = new System.Drawing.Size(52, 27);
             this.txtWrongPosition1.TabIndex = 1;
             this.txtWrongPosition1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWrongPosition1.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtWrongPosition2
             // 
@@ -231,6 +238,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition2.Size = new System.Drawing.Size(52, 27);
             this.txtWrongPosition2.TabIndex = 2;
             this.txtWrongPosition2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWrongPosition2.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtWrongPosition3
             // 
@@ -242,6 +250,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition3.Size = new System.Drawing.Size(52, 27);
             this.txtWrongPosition3.TabIndex = 3;
             this.txtWrongPosition3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWrongPosition3.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtWrongPosition4
             // 
@@ -253,6 +262,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition4.Size = new System.Drawing.Size(52, 27);
             this.txtWrongPosition4.TabIndex = 4;
             this.txtWrongPosition4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWrongPosition4.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // txtWrongPosition5
             // 
@@ -264,6 +274,7 @@ namespace TermooHelper.UI
             this.txtWrongPosition5.Size = new System.Drawing.Size(53, 27);
             this.txtWrongPosition5.TabIndex = 5;
             this.txtWrongPosition5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWrongPosition5.TextChanged += new System.EventHandler(this.txtLetterOne_TextChanged);
             // 
             // label4
             // 
@@ -273,11 +284,20 @@ namespace TermooHelper.UI
             this.label4.TabIndex = 15;
             this.label4.Text = "2. Informe as letras q existem, mas estão fora de posição";
             // 
+            // lblPalavras
+            // 
+            this.lblPalavras.Location = new System.Drawing.Point(422, 9);
+            this.lblPalavras.Name = "lblPalavras";
+            this.lblPalavras.Size = new System.Drawing.Size(253, 29);
+            this.lblPalavras.TabIndex = 16;
+            this.lblPalavras.Text = " - ";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 558);
+            this.Controls.Add(this.lblPalavras);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pnlWrong);
             this.Controls.Add(this.btnReset);
@@ -331,5 +351,6 @@ namespace TermooHelper.UI
         private TextBox txtWrongPosition4;
         private TextBox txtWrongPosition5;
         private Label label4;
+        private Label lblPalavras;
     }
 }
